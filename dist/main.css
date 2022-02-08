@@ -236,7 +236,7 @@ header nav ul a:hover::after {
   left:auto;
   
   top: 25%;
-  height: 400px;
+  height: 420px;
   z-index: 5;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
   border-radius: 23px;
@@ -337,9 +337,9 @@ header nav ul a:hover::after {
   position: absolute;
   background: rgba(96, 11, 167);
   width: auto;
-  height: 400px;
+  height: 410px;
   border-radius: 23px;
-  padding: 40px 0 0 20px;
+  padding: 30px 20px 20px 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.488);
   transition: all 0.4s;
 }
