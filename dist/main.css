@@ -236,9 +236,8 @@ header nav ul a:hover::after {
   left:auto;
   
   top: 25%;
-  width: 400px;
-  z-index: 5;
   height: 400px;
+  z-index: 5;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
   border-radius: 23px;
   background-color: transparent;
@@ -246,6 +245,12 @@ header nav ul a:hover::after {
   font-family: "Raleway", sans-serif;
   color: white;
   overflow: hidden;
+}
+
+@media only screen and (min-device-with:700px) {
+  .box{
+    width: 400px;
+  }
 }
 
 .center {
@@ -331,7 +336,7 @@ header nav ul a:hover::after {
 .left_container {
   position: absolute;
   background: rgba(96, 11, 167);
-  width: 400px;
+  width: auto;
   height: 400px;
   border-radius: 23px;
   padding: 40px 0 0 20px;
@@ -398,7 +403,7 @@ header nav ul a:hover::after {
 #fixed-social {
   position: fixed;
   top: 38%;
-  z-index: 5;
+  z-index: 10;
 }
 
 #fixed-social a {
