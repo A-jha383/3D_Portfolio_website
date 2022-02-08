@@ -82,7 +82,7 @@ header nav ul #nav_item_4 a::after {
 }
 
 header nav ul #nav_item_4 a:hover {
-  background-color: #0d4690;
+  background-color: rgba(96, 11, 167);
 }
 
 header nav ul #nav_item_4 a:hover svg path {
@@ -99,7 +99,7 @@ header nav ul #nav_item_4 a svg {
 }
 
 header nav ul #nav_item_4 a svg path {
-  fill: #0d4690;
+  fill: rgba(96, 11, 167);
   -webkit-transition: 0.1s ease;
   transition: 0.1s ease;
 }
@@ -107,7 +107,7 @@ header nav ul #nav_item_4 a svg path {
 header nav ul a {
   font-size: 17px;
   font-weight: 600;
-  color: #0d4690;
+  color: rgba(96, 11, 167);
   text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -153,7 +153,7 @@ header nav ul a::after {
   top: 0%;
   left: 0;
   height: 0%;
-  background-color: #0d4690;
+  background-color: rgba(96, 11, 167);
   width: 100%;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
@@ -234,6 +234,7 @@ header nav ul a:hover::after {
 .box {
   position: absolute;
   left:auto;
+  
   top: 25%;
   width: 400px;
   z-index: 5;
@@ -256,21 +257,25 @@ header nav ul a:hover::after {
 .box img {
   border-radius: 40%;
   height: 100px;
+  
+  align-items: center;
   position: relative;
   top: -5rem;
-  left: 3rem;
+  left: 6rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
 }
 
 .text {
   position: relative;
   top: 45px;
+  text-align: center;
   right: 3rem;
 }
 
 .user_name {
   font-size: large;
   font-weight: 800;
+  text-align: center;
   position: inherit;
   top: 5px;
 }
@@ -325,7 +330,7 @@ header nav ul a:hover::after {
 
 .left_container {
   position: absolute;
-  background: #001722;
+  background: rgba(96, 11, 167);
   width: 400px;
   height: 400px;
   border-radius: 23px;
@@ -388,3 +393,80 @@ header nav ul a:hover::after {
     top: 20%;
   }
 }
+
+
+#fixed-social {
+  position: fixed;
+  top: 38%;
+  z-index: 5;
+}
+
+#fixed-social a {
+  color: #fff;
+  display: block;
+  height: 40px;
+  position: relative;
+  text-align: center;
+   line-height: 40px;
+  width: 40px;
+  margin-bottom: 1px;
+  z-index: 2;
+}
+#fixed-social a:hover>span{
+ visibility: visible;
+ left: 41px;
+ opacity: 1;
+} 
+#fixed-social a span {
+ line-height: 40px;
+   left: 60px;
+   position: absolute;
+   text-align: center;
+   width: 120px;
+   visibility: hidden;
+   transition-duration: 0.5s;
+   z-index: 1;
+   opacity: 0;
+}
+.fixed-facebook{
+  background-color: #00AAE5;
+}
+.fixed-facebook span{
+ background-color: #00AAE5;
+}
+.fixed-twitter{
+ background-color: #7D3895;
+
+}
+.fixed-twitter span{
+  background-color: #7D3895;
+}
+.fixed-gplus{
+ background-color: #00AF54;
+
+}
+.fixed-gplus span{
+  background-color: #00AF54;
+}
+.fixed-linkedin{
+ background-color: #FFC41E;
+
+}
+.fixed-linkedin span{
+  background-color: #FFC41E;
+}
+.fixed-instagrem{
+ background-color: #ED2B29;
+
+}
+.fixed-instagrem span{
+  background-color: #ED2B29;
+}
+.fixed-tumblr{
+ background-color: #EB1471;
+
+}
+.fixed-tumblr span{
+  background-color: #EB1471;
+}
+/*end fixed social*/

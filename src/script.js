@@ -10,7 +10,7 @@ import galaxyFragmentShader from './shaders/galaxy/fragment.glsl'
  * Base
  */
 // // Debug
-// const gui = new dat.GUI()
+//const gui = new dat.GUI()
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
@@ -151,6 +151,7 @@ const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
 }
+
 
 const cursor = {
     x: 0,
