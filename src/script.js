@@ -21,8 +21,8 @@ const scene = new THREE.Scene()
 const hemisphereLight = new THREE.HemisphereLight(0xff0000,0x0000ff,0.5)
 scene.add(hemisphereLight)
 
-const fog = new THREE.Fog('#262837',1,15)
-scene.fog = fog
+// const fog = new THREE.Fog('#262837',1,15)
+// scene.fog = fog
 
 
 /**
@@ -42,6 +42,16 @@ parameters.outsideColor = '#1b3984'
 let geometry = null
 let material = null
 let points = null
+
+window.addEventListener('dblclick',()=>{
+    if(!document.fullscreenElement){
+        canvas.requestFullscreen()
+    }
+    else{
+        document.exitFullscreen()
+    }
+ })
+ 
 
 const generateGalaxy = () =>
 {
@@ -142,6 +152,17 @@ const sizes = {
     height: window.innerHeight
 }
 
+const cursor = {
+    x: 0,
+    y: 0
+}
+
+window.addEventListener('mousemove', (event) =>
+{
+    cursor.x = event.clientX / sizes.width - 0.5
+    cursor.y = - (event.clientY / sizes.height - 0.5)
+})
+
 window.addEventListener('resize', () =>
 {
     // Update sizes
@@ -162,9 +183,9 @@ window.addEventListener('resize', () =>
  */
 // Base camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
-camera.position.x = 3
-camera.position.y = 3
-camera.position.z = 3
+camera.position.x = 2
+camera.position.y = 2
+camera.position.z = 2
 scene.add(camera)
 
 // Controls
@@ -178,13 +199,33 @@ const renderer = new THREE.WebGLRenderer({
     canvas: canvas
 })
 renderer.setSize(sizes.width, sizes.height)
-renderer.setClearColor('#0d4690')
+renderer.setClearColor('#000000')
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
 /**
  * Generate the first galaxy
  */
 generateGalaxy()
+const clc = document.querySelector(".cancel");
+const arr = document.querySelector(".arr_container");
+const left_container = document.querySelector(".left_container");
+
+arr.addEventListener("click", () => {
+  arr.classList.add("active_arr");
+  if (left_container.classList.contains("off")) {
+    left_container.classList.remove("off");
+    left_container.classList.add("active");
+  }
+});
+
+clc.addEventListener("click", () => {
+  arr.classList.remove("active_arr");
+  if (left_container.classList.contains("active")) {
+    left_container.classList.remove("off");
+    left_container.classList.add("off");
+  }
+});
+
 
 /**
  * Animate
@@ -200,6 +241,8 @@ const tick = () =>
 
     // Update controls
     controls.update()
+    camera.position.y = Math.sin(cursor.y*Math.PI);
+    camera.position.x=Math.sin(cursor.x*Math.PI);
 
     // Render
     renderer.render(scene, camera)

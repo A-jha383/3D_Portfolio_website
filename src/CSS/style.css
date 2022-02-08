@@ -31,10 +31,10 @@ header,
 }
 
 header {
-  background-color: #ffffffa2;
+  background-color: transparent;
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
-  border: 1px solid white;
+  border: 1px solid transparent;
   width: 100%;
   padding: 6px 20px;
 }
@@ -185,10 +185,10 @@ header nav ul a:hover::after {
 .github_link a {
   font-size: 15px;
   font-weight: 600;
-  color: #426592;
+  color: #f6f7f8;
   text-decoration: none;
   padding: 3px 14px;
-  background-color: rgba(255, 255, 255, 0.336);
+  background-color: rgba(96, 11, 167, 0.336);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   border-radius: 4px;
@@ -221,3 +221,170 @@ header nav ul a:hover::after {
   }
 }
 /*# sourceMappingURL=style.css.map */
+
+
+.main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.box {
+  position: absolute;
+  left:auto;
+  top: 25%;
+  width: 400px;
+  z-index: 5;
+  height: 400px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 23px;
+  background-color: transparent;
+  backdrop-filter: saturate(180%) blur(10px);
+  font-family: "Raleway", sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.box img {
+  border-radius: 100%;
+  height: 100px;
+  position: relative;
+  top: -3rem;
+  left: 3rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+}
+
+.text {
+  position: relative;
+  top: 45px;
+  right: 3rem;
+}
+
+.user_name {
+  font-size: large;
+  font-weight: 800;
+  position: inherit;
+  top: 5px;
+}
+
+.skill {
+  position: inherit;
+  bottom: 5px;
+  font-size: medium;
+  color: rgba(255, 255, 255, 0.877);
+}
+
+.arr_container i {
+  color: rgb(70, 70, 70);
+  position: inherit;
+  right: 22px;
+  bottom: 16px;
+  font-size: large;
+  transform: rotate(-45deg);
+}
+
+.arr_container,
+.cancel {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 23px 0 23px 0;
+  transition-duration: 0.3s;
+}
+
+.cancel:hover {
+  background-color: rgba(255, 255, 255, 0.555);
+}
+
+.cancel i {
+  color: rgb(70, 70, 70);
+  position: inherit;
+  right: 20px;
+  bottom: 16px;
+  font-size: larger;
+}
+
+.arr_container:hover {
+  background-color: rgba(255, 255, 255, 0.555);
+}
+
+.active_arr {
+  transform: translate(80%, 80%);
+}
+
+.left_container {
+  position: absolute;
+  background: #001722;
+  width: 400px;
+  height: 400px;
+  border-radius: 23px;
+  padding: 40px 0 0 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.488);
+  transition: all 0.4s;
+}
+
+.left_container p {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.left_container .skills div {
+  display: inline;
+  color: rgb(155, 155, 155);
+  border: 1px solid rgb(155, 155, 155);
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  margin: 4px 4px 4px 0;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.left_container .skills div:hover {
+  color: rgb(33, 175, 128);
+  border: 1px solid rgb(23, 90, 128);
+}
+
+.left_container .icons {
+  font-size: 1.6rem;
+  margin-top: 20px;
+}
+
+.left_container .icons a {
+  color: #cfcfcf;
+  cursor: pointer;
+  z-index: auto;
+  margin-right: 10px;
+  transition: all 0.4s;
+  text-decoration: none;
+}
+
+.left_container .icons a:hover {
+  color: #2c5364;
+}
+
+.off {
+  transform: translate(-80%, -86%) rotate(90deg);
+}
+
+.active {
+  transform: translate(0px) rotate(0px);
+}
+
+@media only screen and (max-width: 600px) {
+  .box {
+    position: fixed;
+    left: 15%;
+    top: 20%;
+  }
+}
