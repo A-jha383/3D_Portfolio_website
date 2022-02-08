@@ -254,10 +254,10 @@ header nav ul a:hover::after {
 }
 
 .box img {
-  border-radius: 100%;
+  border-radius: 40%;
   height: 100px;
   position: relative;
-  top: -3rem;
+  top: -5rem;
   left: 3rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
 }
